@@ -5,13 +5,26 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.rinfon.view.HintEditText;
+import com.rinfon.view.InjectToolUtils;
+import com.rinfon.view.InjectView;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    @InjectView(id=R.id.hintedittext)
+    private HintEditText mEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        try {
+            InjectToolUtils.autoInjectAllField(this);
+            mEditText.setText("change word");
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

@@ -13,13 +13,13 @@ import android.widget.EditText;
 
 import com.rinfon.hintsizetext.R;
 
-public class DDEditText extends EditText {
-    public DDEditText(Context context, AttributeSet attrs) {
+public class HintEditText extends EditText {
+    public HintEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs, 0);
     }
 
-    public DDEditText(Context context, AttributeSet attrs, int defStyleAttr) {
+    public HintEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs, defStyleAttr);
     }
